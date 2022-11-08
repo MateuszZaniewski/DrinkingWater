@@ -9,7 +9,7 @@ let db,
     dbConnectionStr = process.env.DB_STRING,
     dbName = 'drinkWater'
 
-MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
+MongoClient.connect('mongodb+srv://vascoon:5j8tampa@class41app.hlsuvps.mongodb.net/test', { useUnifiedTopology: true })
     .then(client => {
         console.log(`Connected to ${dbName} Database`)
         db = client.db(dbName)
